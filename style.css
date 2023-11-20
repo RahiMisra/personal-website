@@ -284,13 +284,13 @@ main {
     font-size: .5em;
 }
 /* Alternate room descriptions text styles */
-.theme-blue .room_descriptions_text {
+.theme-blue .room_description_text {
     color: #FFFFFF;
 }
-.theme-white .room_descriptions_text {
+.theme-white .room_description_text {
     color: #0008CB;
 }
-.theme-black .room_descriptions_text {
+.theme-black .room_description_text {
     color: #FFFFFF;
 }
 #about_resume {
