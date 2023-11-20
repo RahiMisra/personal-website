@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    
+</head>
+<body>
+    <main>
+        <div class="wip">this website is a work in progress :/</div>
+        <div id="container">
+            <div class="page" id="homepage">
+                <!--these are the main rooms on the blueprints that link to all the other pages-->
+                <div class="room" id="projects_room" onclick="showPage('projectpage')">
+                    <!--this room just displays messages to the user-->
+                    <div class="room_text">Projects</div>
+                    <div class="room_number" id="project_room_num">1</div>
+                </div>
+                <div class="room" id="resume_room" onclick="showPage('resumepage')">
+                    <!--this room takes you to the projects page-->
+                    <div class="room_text">Resume</div>
+                    <div class="room_number" id="resume_room_num">2</div>
+                </div>
+                <div class="room" id="about_me_room" onclick="showPage('aboutpage')">
+                    <!--this room takes you to the about me page-->
+                    <div class="room_text">About Me</div>
+                    <div class="room_number" id="about_me_room_num">3</div>
+                </div>
+                <div class="room" id="contact_room" onclick="showPage('contactpage')">
+                    <!--this room takes you to the theme page or toggles a different color-->
+                    <div class="room_text">Contact</div>
+                    <div class="room_number" id="contact_room_num">4</div>
+                </div>
+                <div class="room" id="theme_room" onclick="showPage('themepage')">
+                    <!--this room takes you to the contact page-->
+                    <div class="room_text">Theme</div>
+                    <div class="room_number" id="theme_room_num">5</div>
+                </div>
+            </div>
+            <div class="page" id="projectpage">
+                <div class="room" id="project_image">
+                    <div class="room_text">
+                        <img id="project_icon" src="/icons/hidden.svg" alt="hidden">
+                    </div>
+                </div>
+                <div class="room" id="project_description">
+                    <div class="project_room_text">
+                        This project is still in development.
+                    </div>
+                </div>
+                <div class="room" id="project_list">
+                    <div class="room_text">list</div>
+                </div>
+                <div class="room" id="project_link">
+                    <div class="room_text">link</div>
+                </div>
+            </div>
+            <div class="page" id="resumepage">
+                <div class="room" id="resume_text">
+                    <p class="resume_room_text" id="resumename">Rahi Misra</p>
+                    <p class="resume_room_text">rahi.misra112@my.csun.edu</p>
+                    <p class="resume_room_text">Bachelor’s Degree of Science in Computer Science - California State University Northridge - 2024</p>
+                    <div class="resume_room_text" id="skillspace"></div>
+                    <p class="resume_room_text">Visual Basic, C, C++, Java, HTML, CSS, Javascript, Racket, Prolog, SQL</p>
+                    <p class="resume_room_text">Jira, Trello, Github, Figma, Gimp</p>
+                    <p class="resume_room_text">Agile Methodologies, Project Planning, Full Stack Development</p>
+                </div>
+                <a href="https://docs.google.com/file/d/1saZvKyHyTHkgVWiz1nMlL026_iRFN5VpvxtcUJejDQY/view" target="_blank" class="room" id="resume_link">
+                    <div class="room_text">full resume</div>
+                </a>
+                <div class="room" id="resume_about" onclick="showPage('aboutpage')">
+                    <div class="room_text">about</div>
+                </div>
+                <div class="room" id="resume_contact" onclick="showPage('contactpage')">
+                    <div class="room_text">contact</div>
+                </div>
+            </div>
+            <div class="page" id="aboutpage">
+                <div class="room" id="about_image">
+                    <img id="user_icon" src="/icons/user.svg" alt="pfp">
+                </div>
+                <div class="room" id="about_description">
+                    <div class="room_description_text">
+                        Rahi Misra is a 21 year old software developer from California. He has a bachelor's degree in computer science from California State University Northridge. He's interested in music and games, and looking to combine those passions with his computer science skills.
+                    </div>
+                </div>
+                <div class="room" id="about_resume" onclick="showPage('resumepage')">
+                    <div class="room_text">resume</div>
+                </div>
+                <div class="room" id="about_contact" onclick="showPage('contactpage')">
+                    <div class="room_text">contact</div>
+                </div>
+            </div>
+            <div class="page" id="contactpage">
+                <div class="room" id="contact_text">
+                    <a href="mailto:rahi.misra112@my.csun.edu" class="contact_room_text">rahi.misra112@my.csun.edu</a>
+                </div>
+            </div>
+            <div class="page" id="themepage">
+                <div class="room" id="theme_white_room">
+                    <div class="room_text">white</div>
+                </div>
+                <div class="room" id="theme_blue_room">
+                    <div class="room_text">blue</div>
+                </div>
+                <div class="room" id="theme_black_room">
+                    <div class="room_text">black</div>
+                </div>
+            </div>
+        </div>
+        <!--this div is a set of info boxes that make the website look like a technical document-->
+        <div id="info_bar">
+            <!--this box will display my skills in the form of little icons-->
+            <div id="skills_box" class="box">
+                <div id="skills_text">Skills:</div>
+                <div id="skill_icons">
+                        <img class="icon" id="java_icon" src="/icons/java.svg" alt="java">
+                        <img class="icon" id="cpp_icon" src="/icons/cpp.svg" alt="cpp">
+                        <img class="icon" id="c_icon" src="/icons/c.svg" alt="c">
+                        <img class="icon" id="visual_basic_icon" src="/icons/vb.svg" alt="vb">
+                        <img class="icon" id="sql_icon"src="/icons/mysql.svg" alt="mysql">
+                        <img class="icon" id="html_icon" src="/icons/html.svg" alt="html">
+                        <img class="icon" id="css_icon" src="/icons/css.svg" alt="css">
+                        <img class="icon" id="javascript_icon" src="/icons/js.svg" alt="javascript">
+                        <img class="icon" id="racket_icon" src="/icons/racket.svg" alt="racket">
+                        <img class="icon" id="prolog_icon" src="/icons/prolog.svg" alt="prolog">
+                </div>
+            </div>
+            <div id="nav_box" class="box">
+                <!--this is the navigation box at the bottom of the website-->
+                <div id="navlinks">
+                    <!--change the #s with the file name the page is in-->
+                    <div class="navlink" onclick="showPage('homepage')">Home</div>
+                    <div class="navlink" onclick="showPage('projectpage')">Projects</div>
+                    <div class="navlink" onclick="showPage('resumepage')">Resume</div>
+                    <div class="navlink" onclick="showPage('aboutpage')">About Me</div>
+                    <div class="navlink" onclick="showPage('contactpage')">Contact</div>
+                </div>
+                <!--these are the room numbers that are listed in parallel with the nav links-->
+                <div id="room_num">
+                    <div class="roomlabel" onclick="showPage('homepage')">Room 0</div>
+                    <div class="roomlabel" onclick="showPage('projectpage')">Room 1</div>
+                    <div class="roomlabel" onclick="showPage('resumepage')">Room 2</div>
+                    <div class="roomlabel" onclick="showPage('aboutpage')">Room 3</div>
+                    <div class="roomlabel" onclick="showPage('contactpage')">Room 4</div>
+                </div>
+            </div>
+            <div id="theme_box" class="box">
+                <!--this is the quick theme selection box-->
+                <div id="theme_selector">
+                    <div class="theme_option" id="theme_white">Theme: White</div>
+                    <div class="theme_option" id="theme_blue">Theme: Blue</div>
+                    <div class="theme_option" id="theme_black">Theme: Black</div>
+                </div>
+            </div>
+            <!--this box displays a small discription of the site-->
+            <!--might change this to have icons for all my skills-->
+            <!--might also want a resume button-->
+            <div id="description_box" class="box">
+                <div id="description">A portfolio created by Rahi Misra to layout their skills and experiences as a Software Engineer. The design of this portfolio is inspired by technical documents such as blueprints.</div>
+            </div>
+            <div id="cool_box" class="box">
+                <!--this box is text that makes this look more technical-->
+                <div id="codename_box" class="minibox">Portfolio 1 Ver. A Codename: BLUEPRINT</div>
+                <!--this box says i made it-->
+                <div id="name_box" class="minibox">Website by Rahi Misra</div>
+            </div>
+        </div>
+        <div class="wip">themes coming soon :)</div>
+    </main>
+</body>
+</html>

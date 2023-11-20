@@ -1,0 +1,501 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:10px solid #FFFFFF;
+    border-width: 5px;
+    padding: 20px;
+    background-image: radial-gradient(circle, #3582F6, #0008CB);
+    background-color: #3582F6;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    /* border: 10px solid #FFFFFF; */
+    width: 90%;
+    height: 90%;
+}
+.wip {
+    font-size: 32px;
+    color: #FFFFFF;
+}
+.page {
+    font-size: 32px;
+    transition: opacity 0.3s ease;
+}
+#homepage {
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+.room {
+    border: 5px solid #FFFFFF;
+    font-size: 1em;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+.room:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.room_text {
+    text-align: center;
+    color: #FFFFFF;
+}
+.room_number {
+    color: #FFFFFF;
+}
+#projects_room {
+    position: absolute;
+    top: 10%;
+    left: 26%;
+    height: 30%;
+    width: 20%;
+    cursor: pointer;
+}
+#project_room_num {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+#resume_room {
+    position: absolute;
+    top: 27%;
+    right: 21%;
+    height: 22%;
+    width: 20%;
+    cursor: pointer;
+}
+#resume_room_num {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+#about_me_room {
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    height: 25%;
+    width: 20%;
+    cursor: pointer;
+}
+#about_me_room_num {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+#contact_room {
+    position: absolute;
+    bottom: 18%;
+    right: 28%;
+    height: 25%;
+    width: 18%;
+    cursor: pointer;
+}
+#contact_room_num {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+#theme_room {
+    position: absolute;
+    bottom: 11%;
+    left: 34%;
+    height: 17%;
+    width: 22%;
+    cursor: pointer;
+}
+#theme_room_num {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+#projectpage {
+    width: 50%;
+    height: 75%;
+    display: none;
+    gap: 1rem;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 3fr 1fr 1fr;
+}
+#project_image {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row: span 1;
+}
+#project_icon {
+    width: 50%;
+    height: 50%;
+    filter: brightness(0) invert(1);
+}
+#project_description {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-row: span 2;
+}
+.project_room_text {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: .5em;
+}
+#project_list {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-end: 3;
+}
+#project_link {
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-row: span 1;
+    cursor: pointer;
+}
+#resumepage {
+    width: 50%;
+    height: 75%;
+    display: none;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 4fr 1fr;
+}
+#resume_text {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column: span 3;
+    display: block;
+}
+.resume_room_text {
+    text-align: center;
+    font-size: .5em;
+    color: #FFFFFF;
+}
+#resumename {
+    font-size: .75em;
+}
+#skillspace {
+    height: 5px;
+}
+#resume_link {
+    grid-column: span 1;
+    cursor: pointer;
+    text-decoration: none;
+}
+#resume_link:focus {
+    text-decoration: none;
+}
+#resume_about {
+    grid-column: span 1;
+    cursor: pointer;
+}
+#resume_contact {
+    grid-column: span 1;
+    cursor: pointer;
+}
+#aboutpage {
+    width: 50%;
+    height: 75%;
+    display: none;
+    gap: 1rem;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 4fr 1fr;
+}
+#about_image {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row: span 2;
+}
+#user_icon {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0) invert(1);
+}
+#about_description {
+    grid-column: span 2;
+}
+.room_description_text {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: .5em;
+}
+#about_resume {
+    grid-column: span 1;
+    cursor: pointer;
+}
+#about_contact {
+    grid-column: span 1;
+    cursor: pointer;
+}
+#contactpage {
+    display: none;
+    width: 50%;
+    height: 75%;
+}
+#contact_text {
+    display: grid;
+}
+.contact_room_text {
+    text-align: center;
+    font-size: 1em;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: none;
+}
+.contact_room_text:focus {
+    text-decoration: none;
+}
+#themepage {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#theme_white_room {
+    position: absolute;
+    top: 10%;
+    left: 26%;
+    height: 30%;
+    width: 20%;
+}
+#theme_blue_room {
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    height: 30%;
+    width: 20%;
+}
+#theme_black_room {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    height: 30%;
+    width: 20%;
+}
+#container {
+    width: 100%;
+    flex: 3;
+    background-color: transparent;
+    border: 10px solid #FFFFFF;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container::before {
+    content: "";
+    background-size: 2% 5%;
+    background-repeat: repeat;
+    background-image:
+        linear-gradient(to right, #FFFFFF 1px, transparent 1px),
+        linear-gradient(to bottom, #FFFFFF 1px, transparent 1px);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+}
+#info_bar {
+    width: 100%;
+    flex: 1;
+    background-color: transparent;
+    border: 10px solid #FFFFFF;
+    border-top-width: 0;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+.box {
+    /* border: 5px solid #FFFFFF; */
+    background-color: transparent;
+    font-size: 1em;
+}
+.minibox {
+    /* border: 5px solid #FFFFFF; */
+    background-color: transparent;
+    font-size: 1rem;
+}
+@media (max-width: 1000px) {
+    .box {
+      font-size: 0.9rem; /* Adjust the value as needed for smaller screens */
+    }
+    .minibox {
+        font-size: 0.9rem; /* Adjust the value as needed for smaller screens */
+      }
+}
+@media (max-width: 800px) {
+    .box {
+      font-size: 0.8rem; /* Adjust the value as needed for smaller screens */
+    }
+    .minibox {
+        font-size: 0.9rem; /* Adjust the value as needed for smaller screens */
+      }
+}
+@media (max-width: 600px) {
+    .box {
+      font-size: 0.7rem; /* Adjust the value as needed for smaller screens */
+    }
+    .minibox {
+        font-size: 0.9rem; /* Adjust the value as needed for smaller screens */
+      }
+}
+#skills_box {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease;
+    padding: 10px;
+}
+#skills_box:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#skill_icons {
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.icon {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+.icon:hover {
+    filter: grayscale(0%);
+    scale: 1.1;
+}
+#nav_box {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 10px solid #FFFFFF;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    transition: background-color 0.5s ease;
+}
+#nav_box:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#navlinks {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navlink {
+    flex:  1;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+#room_num {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.roomlabel {
+    flex:  1;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+#navlinks a {
+    color: #FFFFFF;
+    white-space: nowrap;
+    text-decoration: none;
+}
+#room_num a {
+    color: #FFFFFF;
+    white-space: nowrap;
+    text-decoration: none;
+}
+#theme_box {
+    flex: 2;
+    white-space: nowrap;
+    transition: background-color 0.5s ease;
+}
+#theme_box:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#theme_selector {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.theme_option {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#description_box {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid #FFFFFF;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    transition: background-color 0.5s ease;
+}
+#description_box:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+#cool_box {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+#cool_box:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#codename_box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    border: 10px solid #FFFFFF;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+}
+#name_box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
