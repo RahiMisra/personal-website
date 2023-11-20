@@ -12,6 +12,19 @@ body {
     background-image: radial-gradient(circle, #3582F6, #0008CB);
     background-color: #3582F6;
 }
+/* Alternate body styles */
+body.theme-blue {
+    background-image: radial-gradient(circle, #3582F6, #0008CB);
+    background-color: #3582F6;
+}
+body.theme-white {
+    background-image: none;
+    background-color: #FFFFFF;
+}
+body.theme-black {
+    background-image: radial-gradient(circle, #000000, #000353);
+    background-color: #000000;
+}
 main {
     display: flex;
     flex-direction: column;
@@ -39,6 +52,16 @@ main {
     align-items: center;
     transition: background-color 0.5s ease;
 }
+/* Alternate room border styles */
+.theme-blue .room {
+    border-color: #FFFFFF;
+}
+.theme-white .room {
+    border-color: #0008CB;
+}
+.theme-black .room {
+    border-color: #FFFFFF;
+}
 .room:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -46,7 +69,27 @@ main {
     text-align: center;
     color: #FFFFFF;
 }
+/* Alternate room text styles */
+.theme-blue .room_text {
+    color: #FFFFFF;
+}
+.theme-white .room_text {
+    color: #0008CB;
+}
+.theme-black .room_text {
+    color: #FFFFFF;
+}
 .room_number {
+    color: #FFFFFF;
+}
+/* Alternate room number styles */
+.theme-blue .room_number {
+    color: #FFFFFF;
+}
+.theme-white .room_number {
+    color: #0008CB;
+}
+.theme-black .room_number {
     color: #FFFFFF;
 }
 #projects_room {
@@ -142,6 +185,16 @@ main {
     color: #FFFFFF;
     font-size: .5em;
 }
+/* Alternate project room text styles */
+.theme-blue .project_room_text {
+    color: #FFFFFF;
+}
+.theme-white .project_room_text {
+    color: #0008CB;
+}
+.theme-black .project_room_text {
+    color: #FFFFFF;
+}
 #project_list {
     grid-row-start: 1;
     grid-column-start: 2;
@@ -170,6 +223,16 @@ main {
 .resume_room_text {
     text-align: center;
     font-size: .5em;
+    color: #FFFFFF;
+}
+/* Alternate resume room text styles */
+.theme-blue .resume_room_text {
+    color: #FFFFFF;
+}
+.theme-white .resume_room_text {
+    color: #0008CB;
+}
+.theme-black .resume_room_text {
     color: #FFFFFF;
 }
 #resumename {
@@ -220,6 +283,16 @@ main {
     color: #FFFFFF;
     font-size: .5em;
 }
+/* Alternate room descriptions text styles */
+.theme-blue .room_descriptions_text {
+    color: #FFFFFF;
+}
+.theme-white .room_descriptions_text {
+    color: #0008CB;
+}
+.theme-black .room_descriptions_text {
+    color: #FFFFFF;
+}
 #about_resume {
     grid-column: span 1;
     cursor: pointer;
@@ -242,6 +315,16 @@ main {
     color: #FFFFFF;
     cursor: pointer;
     text-decoration: none;
+}
+/* Alternate contact room text styles */
+.theme-blue .contact_room_text {
+    color: #FFFFFF;
+}
+.theme-white .contact_room_text {
+    color: #0008CB;
+}
+.theme-black .contact_room_text {
+    color: #FFFFFF;
 }
 .contact_room_text:focus {
     text-decoration: none;
@@ -272,6 +355,20 @@ main {
     height: 30%;
     width: 20%;
 }
+.theme_text {
+    text-align: center;
+    color: #FFFFFF;
+}
+/* Alternate theme text styles */
+.theme-blue .teme_text {
+    color: #FFFFFF;
+}
+.theme-white .theme_text {
+    color: #0008CB;
+}
+.theme-black .theme_text {
+    color: #FFFFFF;
+}
 #container {
     width: 100%;
     flex: 3;
@@ -281,6 +378,16 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+/* Alternate container border styles */
+.theme-blue #container {
+    border-color: #FFFFFF;
+}
+.theme-white #container {
+    border-color: #0008CB;
+}
+.theme-black #container {
+    border-color: #FFFFFF;
 }
 #container::before {
     content: "";
@@ -296,6 +403,22 @@ main {
     left: 0px;
     opacity: 0.5;
 }
+/* Alternate background grid styles */
+.theme-blue #container::before {
+    background-image:
+        linear-gradient(to right, #FFFFFF 1px, transparent 1px),
+        linear-gradient(to bottom, #FFFFFF 1px, transparent 1px);
+}
+.theme-white #container::before {
+    background-image:
+        linear-gradient(to right, #0008CB 1px, transparent 1px),
+        linear-gradient(to bottom, #0008CB 1px, transparent 1px);
+}
+.theme-black #container::before {
+    background-image:
+        linear-gradient(to right, #FFFFFF 1px, transparent 1px),
+        linear-gradient(to bottom, #FFFFFF 1px, transparent 1px);
+}
 #info_bar {
     width: 100%;
     flex: 1;
@@ -307,6 +430,19 @@ main {
     font-size: 16px;
     color: #FFFFFF;
     overflow: hidden;
+}
+/* Alternate info bar styles */
+.theme-blue #info_bar {
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+}
+.theme-white #info_bar {
+    border-color: #0008CB;
+    color: #0008CB;
+}
+.theme-black #info_bar {
+    border-color: #FFFFFF;
+    color: #FFFFFF;
 }
 .box {
     /* border: 5px solid #FFFFFF; */
@@ -385,6 +521,16 @@ main {
     border-bottom-width: 0;
     transition: background-color 0.5s ease;
 }
+/* Alternate nav box border styles */
+.theme-blue #nav_box {
+    border-color: #FFFFFF;
+}
+.theme-white #nav_box {
+    border-color: #0008CB;
+}
+.theme-black #nav_box {
+    border-color: #FFFFFF;
+}
 #nav_box:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -415,12 +561,10 @@ main {
     cursor: pointer;
 }
 #navlinks a {
-    color: #FFFFFF;
     white-space: nowrap;
     text-decoration: none;
 }
 #room_num a {
-    color: #FFFFFF;
     white-space: nowrap;
     text-decoration: none;
 }
@@ -445,6 +589,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 #description_box {
     flex: 3;
@@ -455,6 +600,16 @@ main {
     border-top-width: 0;
     border-bottom-width: 0;
     transition: background-color 0.5s ease;
+}
+/* Alternate description box border styles */
+.theme-blue #description_box {
+    border-color: #FFFFFF;
+}
+.theme-white #description_box {
+    border-color: #0008CB;
+}
+.theme-black #description_box {
+    border-color: #FFFFFF;
 }
 #description_box:hover {
     background-color: rgba(0, 0, 0, 0.5);
@@ -488,6 +643,16 @@ main {
     border-left-width: 0;
     border-right-width: 0;
     border-bottom-width: 0;
+}
+/* Alternate codename box border styles */
+.theme-blue #codename_box {
+    border-color: #FFFFFF;
+}
+.theme-white #codename_box {
+    border-color: #0008CB;
+}
+.theme-black #codename_box {
+    border-color: #FFFFFF;
 }
 #name_box {
     flex: 1;

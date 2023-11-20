@@ -37,3 +37,16 @@ const themepage = document.getElementById('themepage');
     showPageWithFade(selectedPage);
     }, 300);
 }
+
+function toggleTheme(theme) {
+    console.log('Toggle theme:', theme);
+    document.body.classList.remove('theme-white', 'theme-blue', 'theme-black');        
+    if (theme === 'blue') {
+        document.body.classList.add('theme-blue');
+    } else if (theme === 'white') {
+        document.body.classList.add('theme-white');
+    }
+    else if (theme === 'black') {
+        document.body.classList.add('theme-black');
+    }
+}
