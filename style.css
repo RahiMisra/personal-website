@@ -1,13 +1,13 @@
 html, body {
     height: 100%;
-    width: 100%;
+    margin: 0;
 }
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     border:10px solid #FFFFFF;
-    border-width: 5px;
+    box-sizing: border-box;
     padding: 20px;
     background-image: radial-gradient(circle, #3582F6, #0008CB);
     background-color: #3582F6;
