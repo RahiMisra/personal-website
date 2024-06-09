@@ -7,7 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
-    
 </head>
 <body>
     <main>
@@ -42,21 +41,31 @@
             </div>
             <div class="page" id="projectpage">
                 <div class="room" id="project_image">
-                    <div class="room_text">
-                        <img id="project_icon" src="icons/hidden.svg" alt="hidden">
+                    <div class="room_image">
+                        <a id="project_link_url" href="#">
+                            <img id="project_icon" src="">
+                        </a>
                     </div>
                 </div>
                 <div class="room" id="project_description">
-                    <div class="project_room_text">
-                        This project is still in development.
+                    <div class="project_room_text" id="project_description_text">
+                        Click a project for details.
                     </div>
                 </div>
                 <div class="room" id="project_list">
-                    <div class="room_text">list</div>
+                    <div class="project_list_text" id="myHealth" onclick="toggleProject('myHealth')">myHealth</div>
+                    <div class="project_list_text" id="hotel" onclick="toggleProject('hotel')">Hotel Reservation</div>
+                    <div class="project_list_text" id="qaAuto" onclick="toggleProject('qaAuto')">Quality Assurance Automation Script</div>
+                    <div class="project_list_text" id="fmAuto" onclick="toggleProject('fmAuto')">Frame Mark Automation Script</div>
+                    <div class="project_list_text" id="fileSort" onclick="toggleProject('fileSort')">Automatic File Sorter</div>
+                    <div class="project_list_text" id="tennis" onclick="toggleProject('tennis')">Tennis Match Predictions</div>
+                    <div class="project_list_text" id="filght" onclick="toggleProject('flight')">Flight Predictions</div>
+                    <div class="project_list_text" id="trafficLight" onclick="toggleProject('trafficLight')">Traffic Light Simulation</div>
+                    <div class="project_list_text" id="potentiometer" onclick="toggleProject('potentiometer')">Potentiometer Reading</div>
                 </div>
-                <div class="room" id="project_link">
+                <!-- <div class="room" id="project_link">
                     <div class="room_text">link</div>
-                </div>
+                </div> -->
             </div>
             <div class="page" id="resumepage">
                 <div class="room" id="resume_text">
@@ -68,7 +77,7 @@
                     <p class="resume_room_text">Jira, Trello, Github, Figma, Gimp</p>
                     <p class="resume_room_text">Agile Methodologies, Project Planning, Full Stack Development</p>
                 </div>
-                <a href="https://docs.google.com/file/d/1saZvKyHyTHkgVWiz1nMlL026_iRFN5VpvxtcUJejDQY/view" target="_blank" class="room" id="resume_link">
+                <a href="files/Software_Engineering_Resume.pdf" target="_blank" class="room" id="resume_link">
                     <div class="room_text">full resume</div>
                 </a>
                 <div class="room" id="resume_about" onclick="showPage('aboutpage')">
@@ -117,16 +126,36 @@
             <div id="skills_box" class="box">
                 <div id="skills_text">Skills:</div>
                 <div id="skill_icons">
-                        <img class="icon" id="java_icon" src="icons/java.svg" alt="java">
-                        <img class="icon" id="cpp_icon" src="icons/cpp.svg" alt="cpp">
-                        <img class="icon" id="c_icon" src="icons/c.svg" alt="c">
-                        <img class="icon" id="visual_basic_icon" src="icons/vb.svg" alt="vb">
-                        <img class="icon" id="sql_icon"src="icons/mysql.svg" alt="mysql">
-                        <img class="icon" id="html_icon" src="icons/html.svg" alt="html">
-                        <img class="icon" id="css_icon" src="icons/css.svg" alt="css">
-                        <img class="icon" id="javascript_icon" src="icons/js.svg" alt="javascript">
-                        <img class="icon" id="racket_icon" src="icons/racket.svg" alt="racket">
-                        <img class="icon" id="prolog_icon" src="icons/prolog.svg" alt="prolog">
+                        <a class="room_image" href="https://www.java.com">
+                            <img class="icon" id="java_icon" src="icons/java.svg" alt="java">
+                        </a>
+                        <a class="room_image" href="https://en.wikipedia.org/wiki/C%2B%2B">
+                            <img class="icon" id="cpp_icon" src="icons/cpp.svg" alt="cpp">
+                        </a>
+                        <a class="room_image" href="https://en.wikipedia.org/wiki/C_(programming_language)">
+                            <img class="icon" id="c_icon" src="icons/c.svg" alt="c">
+                        </a>
+                        <a class="room_image" href="https://www.python.org">
+                            <img class="icon" id="python_icon" src="icons/python.svg" alt="vb">
+                        </a>
+                        <a class="room_image" href="https://en.wikipedia.org/wiki/SQL">
+                            <img class="icon" id="sql_icon"src="icons/mysql.svg" alt="mysql">
+                        </a>
+                        <a class="room_image" href="https://en.wikipedia.org/wiki/HTML">
+                            <img class="icon" id="html_icon" src="icons/html.svg" alt="html">
+                        </a>
+                        <a class="room_image" href="https://en.wikipedia.org/wiki/CSS">
+                            <img class="icon" id="css_icon" src="icons/css.svg" alt="css">
+                        </a>
+                        <a class="room_image" href="https://en.wikipedia.org/wiki/JavaScript">
+                            <img class="icon" id="javascript_icon" src="icons/js.svg" alt="javascript">
+                        </a>
+                        <a class="room_image" href="https://racket-lang.org">
+                            <img class="icon" id="racket_icon" src="icons/racket.svg" alt="racket">
+                        </a>
+                        <a class="room_image" href="https://www.swi-prolog.org">
+                            <img class="icon" id="prolog_icon" src="icons/prolog.svg" alt="prolog">
+                        </a>
                 </div>
             </div>
             <div id="nav_box" class="box">

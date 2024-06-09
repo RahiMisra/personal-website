@@ -11,6 +11,7 @@ body {
     padding: 20px;
     background-image: radial-gradient(circle, #3582F6, #0008CB);
     background-color: #3582F6;
+    font-family: 'CustomFont', Arial, sans-serif;
 }
 /* Alternate body styles */
 body.theme-blue {
@@ -68,6 +69,13 @@ main {
 .room_text {
     text-align: center;
     color: #FFFFFF;
+}
+.room_image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* Alternate room text styles */
 .theme-blue .room_text {
@@ -163,7 +171,7 @@ main {
     display: none;
     gap: 1rem;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 3fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
 }
 #project_image {
     grid-row-start: 1;
@@ -171,19 +179,37 @@ main {
     grid-row: span 1;
 }
 #project_icon {
-    width: 50%;
-    height: 50%;
-    filter: brightness(0) invert(1);
+    max-width: 50%;
+    max-height: 50%;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+#project_icon:hover {
+    filter: grayscale(0%);
+    scale: 1.1;
+}
+#project_link_url {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #project_description {
     grid-row-start: 2;
     grid-column-start: 1;
-    grid-row: span 2;
+    grid-row: span 1;
 }
 .project_room_text {
     text-align: center;
     color: #FFFFFF;
     font-size: .5em;
+}
+.project_list_text {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: .5em;
+    padding: .25em;
 }
 /* Alternate project room text styles */
 .theme-blue .project_room_text {
@@ -195,17 +221,29 @@ main {
 .theme-black .project_room_text {
     color: #FFFFFF;
 }
+/* Alternate project list text styles */
+.theme-blue .project_list_text {
+    color: #FFFFFF;
+}
+.theme-white .project_list_text {
+    color: #0008CB;
+}
+.theme-black .project_list_text {
+    color: #FFFFFF;
+}
 #project_list {
     grid-row-start: 1;
     grid-column-start: 2;
-    grid-row-end: 3;
+    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
 }
-#project_link {
+/* #project_link {
     grid-row-start: 3;
     grid-column-start: 2;
     grid-row: span 1;
     cursor: pointer;
-}
+} */
 #resumepage {
     width: 50%;
     height: 75%;
@@ -456,26 +494,26 @@ main {
 }
 @media (max-width: 1000px) {
     .box {
-      font-size: 0.9rem; /* Adjust the value as needed for smaller screens */
+      font-size: 0.9rem;
     }
     .minibox {
-        font-size: 0.9rem; /* Adjust the value as needed for smaller screens */
+        font-size: 0.9rem;
       }
 }
 @media (max-width: 800px) {
     .box {
-      font-size: 0.8rem; /* Adjust the value as needed for smaller screens */
+      font-size: 0.8rem;
     }
     .minibox {
-        font-size: 0.9rem; /* Adjust the value as needed for smaller screens */
+        font-size: 0.9rem;
       }
 }
 @media (max-width: 600px) {
     .box {
-      font-size: 0.7rem; /* Adjust the value as needed for smaller screens */
+      font-size: 0.7rem;
     }
     .minibox {
-        font-size: 0.9rem; /* Adjust the value as needed for smaller screens */
+        font-size: 0.9rem;
       }
 }
 #skills_box {
