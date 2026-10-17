@@ -1,63 +1,51 @@
-/* =========================================================
-   BLUEPRINT PORTFOLIO — RAHI MISRA
-   ========================================================= */
 
-/* 01. DESIGN TOKENS
-   --------------------------------------------------------- */
-
+/* Design Information */
 :root {
-    /* Colors */
+    /* colors */
     --color-background: #101D30;
     --color-surface: #183451;
     --color-accent: #56C8E8;
     --color-text: #E8F0F8;
     --color-text-muted: #A7BACD;
     --color-border: #36536F;
-
     --color-grid: rgba(86, 200, 232, 0.07);
     --color-grid-major: rgba(86, 200, 232, 0.15);
     --color-accent-soft: rgba(86, 200, 232, 0.10);
 
-    /* Typography */
+    /* text */
     --font-body: Arial, Helvetica, sans-serif;
     --font-mono: "Courier New", Courier, monospace;
-
     --text-xs: 0.7rem;
     --text-sm: 0.82rem;
     --text-base: 1rem;
     --text-lg: 1.25rem;
     --text-xl: 1.8rem;
     --text-display: clamp(3.5rem, 9vw, 8rem);
-
     --line-height-body: 1.7;
     --line-height-heading: 1.08;
 
-    /* Layout */
-    --sheet-width: 1440px;
+    /* layout */
+    --sheet-width: 1560px;
     --page-gutter: clamp(1.25rem, 5vw, 5rem);
-    --section-space: clamp(5rem, 12vw, 10rem);
+    --section-space: clamp(1.25rem, 5vw, 5rem);
     --content-gap: 1.5rem;
 
-    /* Borders */
+    /* borders */
     --border-thin: 1px solid var(--color-border);
     --border-accent: 1px solid var(--color-accent);
 
-    /* Motion */
+    /* transitions */
     --transition-fast: 180ms ease;
     --transition-normal: 350ms ease;
 }
 
-
-/* 02. RESET & DOCUMENT
-   --------------------------------------------------------- */
-
+/* Default Styling and Behavior */
 * {
     box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
 }
 
 body {
@@ -67,10 +55,9 @@ body {
     font-family: var(--font-body);
     font-size: var(--text-base);
     line-height: var(--line-height-body);
-    -webkit-font-smoothing: antialiased;
 }
 
-body::selection {
+::selection {
     background: var(--color-accent);
     color: var(--color-background);
 }
@@ -82,79 +69,41 @@ a {
 
 a:focus-visible {
     outline: 2px solid var(--color-accent);
-    outline-offset: 5px;
+    outline-offset: 1px;
 }
 
-button,
-a {
-    -webkit-tap-highlight-color: transparent;
-}
-
-img,
-video {
+img, video {
     display: block;
     max-width: 100%;
+    height: auto;
 }
 
-h1,
-h2,
-h3,
-p {
+h1, h2, h3 {
     margin-top: 0;
-}
-
-h1,
-h2,
-h3 {
     line-height: var(--line-height-heading);
     font-weight: 500;
 }
 
 h2,
-.project-number,
-.document-meta,
-.sheet-nav,
-.document-footer,
-.professional-title {
+.project-number, .document-meta, .sheet-nav, .document-footer, .professional-title {
     font-family: var(--font-mono);
     text-transform: uppercase;
 }
 
-
-/* 03. BLUEPRINT SHEET & GRID
-   --------------------------------------------------------- */
-
+/* Blueprint Design */
 .blueprint-sheet {
     position: relative;
     width: min(100%, var(--sheet-width));
     min-height: 100vh;
     margin-inline: auto;
     padding-inline: var(--page-gutter);
-    overflow: clip;
-
     background-color: var(--color-background);
 
     background-image:
-        linear-gradient(
-            to right,
-            var(--color-grid) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            to bottom,
-            var(--color-grid) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            to right,
-            var(--color-grid-major) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            to bottom,
-            var(--color-grid-major) 1px,
-            transparent 1px
-        );
+        linear-gradient(to right, var(--color-grid) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--color-grid) 1px, transparent 1px),
+        linear-gradient(to right, var(--color-grid-major) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--color-grid-major) 1px, transparent 1px);
 
     background-size:
         24px 24px,
@@ -165,14 +114,11 @@ h2,
     border-inline: 1px solid var(--color-border);
 }
 
+/* Section Styling */
 .sheet-section {
     position: relative;
     padding-block: var(--section-space);
-    border-bottom: var(--border-thin);
-    scroll-margin-top: 5rem;
 }
-
-/* Numbered section headings */
 
 .sheet-section > h2,
 .sheet-footer > h2 {
@@ -185,7 +131,8 @@ h2,
     letter-spacing: 0.04em;
 }
 
-.sheet-section > h2::after {
+.sheet-section > h2::after,
+.sheet-footer > h2::after {
     content: "";
     flex: 1;
     height: 1px;
@@ -198,10 +145,7 @@ h2,
     color: var(--color-text-muted);
 }
 
-
-/* 04. HEADER
-   --------------------------------------------------------- */
-
+/* Header */
 .sheet-header {
     position: relative;
     display: flex;
@@ -209,7 +153,6 @@ h2,
     justify-content: center;
     min-height: min(760px, 88svh);
     padding-block: 5rem;
-    border-bottom: var(--border-thin);
 }
 
 .document-meta {
@@ -223,7 +166,7 @@ h2,
     letter-spacing: 0.08em;
 }
 
-.sheet-header h1 {
+.sheet-header h1 { 
     max-width: 12ch;
     margin-bottom: 1.25rem;
     font-size: var(--text-display);
@@ -269,35 +212,28 @@ h2,
     transition:
         background var(--transition-fast),
         color var(--transition-fast),
-        border-color var(--transition-fast);
 }
 
 .header-links a:hover,
 .project-links a:hover {
     color: var(--color-background);
     background: var(--color-accent);
-    border-color: var(--color-accent);
 }
 
-
-/* 05. STICKY NAVIGATION
-   --------------------------------------------------------- */
-
+/* Navigation Bar */
 .sheet-nav {
     position: sticky;
     z-index: 20;
     top: 0;
-
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: clamp(1rem, 3vw, 3rem);
-
     min-height: 68px;
     margin-inline: calc(-1 * var(--page-gutter));
     padding-inline: var(--page-gutter);
-
     background: rgba(16, 29, 48, 0.94);
+    border-top: var(--border-thin);
     border-bottom: var(--border-thin);
     backdrop-filter: blur(14px);
 }
@@ -313,6 +249,7 @@ h2,
 .sheet-nav a:hover,
 .sheet-nav a:focus-visible {
     color: var(--color-accent);
+    outline-offset: 5px;
 }
 
 .sheet-nav a::after {
@@ -333,10 +270,7 @@ h2,
     transform: scaleX(1);
 }
 
-
-/* 06. PROJECTS
-   --------------------------------------------------------- */
-
+/* Project Section */
 .project-list {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -347,38 +281,34 @@ h2,
 
 .project {
     position: relative;
-    grid-column: span 5;
     min-width: 0;
     padding: clamp(1.25rem, 2.5vw, 2rem);
-
     background: rgba(24, 52, 81, 0.88);
     border: 1px solid var(--color-border);
-
     transition:
         border-color var(--transition-normal),
         background var(--transition-normal),
         transform var(--transition-normal);
 }
 
-/* Offset cards to create an editorial rhythm */
-
 .project:nth-child(4n + 1) {
-    grid-column: 1 / span 5;
+    grid-column: 2 / span 4;
+    margin-top: 0rem;
 }
 
 .project:nth-child(4n + 2) {
-    grid-column: 8 / span 5;
-    margin-top: 5rem;
+    grid-column: 8 / span 4;
+    margin-top: 0rem;
 }
 
 .project:nth-child(4n + 3) {
-    grid-column: 2 / span 5;
-    margin-top: -1rem;
+    grid-column: 2 / span 4;
+    margin-top: 0rem;
 }
 
 .project:nth-child(4n + 4) {
-    grid-column: 8 / span 5;
-    margin-top: 4rem;
+    grid-column: 8 / span 4;
+    margin-top: 0rem;
 }
 
 .project:hover {
@@ -398,7 +328,6 @@ h2,
 .project h3 {
     margin-bottom: 1rem;
     font-size: clamp(1.35rem, 2.5vw, 2rem);
-    letter-spacing: -0.035em;
 }
 
 .project > p {
@@ -407,11 +336,9 @@ h2,
     line-height: 1.85;
 }
 
-/* Technology labels */
-
 .project-technologies {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
     gap: 0.5rem;
     padding: 0;
     margin: 1.5rem 0 2rem;
@@ -426,23 +353,7 @@ h2,
     font-size: var(--text-xs);
 }
 
-/* Source/demo links */
-
-.project-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-}
-
-.project-links a {
-    min-height: 40px;
-    padding: 0.55rem 0.8rem;
-}
-
-
-/* 07. ABOUT
-   --------------------------------------------------------- */
-
+/* About Section */
 .about-content {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -470,18 +381,6 @@ h2,
 
 #education {
     grid-column: 9 / -1;
-}
-
-.experience-entry,
-.education-entry,
-.skill-category {
-    padding-top: 1.25rem;
-    border-top: var(--border-thin);
-}
-
-.experience-entry + .experience-entry,
-.education-entry + .education-entry {
-    margin-top: 2.5rem;
 }
 
 .experience-entry h3,
@@ -522,10 +421,7 @@ h2,
     line-height: 1.8;
 }
 
-
-/* 08. CONTACT & FOOTER
-   --------------------------------------------------------- */
-
+/* Footer */
 .sheet-footer {
     position: relative;
     padding-top: var(--section-space);
@@ -570,147 +466,4 @@ h2,
 
 .document-footer a:hover {
     color: var(--color-accent);
-}
-
-
-/* 09. RESPONSIVE LAYOUT
-   --------------------------------------------------------- */
-
-@media (max-width: 800px) {
-    :root {
-        --section-space: 5rem;
-    }
-
-    .sheet-header {
-        min-height: 620px;
-        min-height: 72svh;
-    }
-
-    .project-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1.5rem;
-    }
-
-    .project,
-    .project:nth-child(n) {
-        grid-column: auto;
-        margin-top: 0;
-    }
-
-    .project:nth-child(even) {
-        margin-top: 3rem;
-    }
-
-    .about-content {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 3rem 1.25rem;
-    }
-
-    #background,
-    #experience,
-    #skills,
-    #education {
-        grid-column: auto;
-    }
-
-    #background,
-    #experience,
-    #skills {
-        grid-column: 1 / -1;
-    }
-
-    #skills {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    #education {
-        grid-column: 1 / -1;
-    }
-}
-
-@media (max-width: 520px) {
-    :root {
-        --page-gutter: 1.1rem;
-        --section-space: 4.25rem;
-        --text-display: clamp(3.25rem, 15vw, 5rem);
-    }
-
-    .blueprint-sheet {
-        background-size:
-            20px 20px,
-            20px 20px,
-            100px 100px,
-            100px 100px;
-    }
-
-    .sheet-header {
-        min-height: auto;
-        padding-block: 5rem 4rem;
-    }
-
-    .document-meta {
-        margin-bottom: 3rem;
-        font-size: 0.65rem;
-    }
-
-    .sheet-header h1 {
-        letter-spacing: -0.065em;
-    }
-
-    .sheet-nav {
-        justify-content: space-between;
-        gap: 0.75rem;
-        min-height: 58px;
-    }
-
-    .sheet-nav a {
-        font-size: 0.68rem;
-    }
-
-    .section-intro {
-        margin-bottom: 2.5rem;
-    }
-
-    .project-list {
-        grid-template-columns: minmax(0, 1fr);
-        row-gap: 1.25rem;
-    }
-
-    .project,
-    .project:nth-child(n) {
-        grid-column: 1;
-        margin-top: 0;
-    }
-
-    #skills {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    .about-content {
-        gap: 2.5rem;
-    }
-
-    .document-footer {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-
-    .sheet-footer > a {
-        margin-bottom: 3.5rem;
-    }
-}
-
-
-/* 10. REDUCED MOTION
-   --------------------------------------------------------- */
-
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-    }
 }
