@@ -4,200 +4,303 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rahi Misra | Software Developer</title>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
-    <main>
-        <div id="container">
-            <div class="page" id="homepage">
-                <!--these are the main rooms on the blueprints that link to all the other pages-->
-                <div class="room" id="projects_room" onclick="showPage('projectpage')">
-                    <!--this room just displays messages to the user-->
-                    <div class="room_text">Projects</div>
-                    <div class="room_number" id="project_room_num">1</div>
-                </div>
-                <div class="room" id="resume_room" onclick="showPage('resumepage')">
-                    <!--this room takes you to the projects page-->
-                    <div class="room_text">Resume</div>
-                    <div class="room_number" id="resume_room_num">2</div>
-                </div>
-                <div class="room" id="about_me_room" onclick="showPage('aboutpage')">
-                    <!--this room takes you to the about me page-->
-                    <div class="room_text">About Me</div>
-                    <div class="room_number" id="about_me_room_num">3</div>
-                </div>
-                <div class="room" id="contact_room" onclick="showPage('contactpage')">
-                    <!--this room takes you to the theme page or toggles a different color-->
-                    <div class="room_text">Contact</div>
-                    <div class="room_number" id="contact_room_num">4</div>
-                </div>
-                <div class="room" id="theme_room" onclick="showPage('themepage')">
-                    <!--this room takes you to the contact page-->
-                    <div class="room_text">Theme</div>
-                    <div class="room_number" id="theme_room_num">5</div>
-                </div>
+    <div class="scroll-indicator" aria-label="Reading progress">
+        <div class="scroll-progress-track">
+            <div id="scroll-progress-bar"></div>
+        </div>
+    </div>
+    <div class="blueprint-cursor" aria-hidden="true">
+        <div class="cursor-crosshair"></div>
+        <span id="cursor-coordinates">X: 000 Y: 000</span>
+    </div>
+    <main class="blueprint-sheet">
+        <header id="top" class="sheet-header" data-progress-label="00 / OVERVIEW">
+
+            <div class="document-meta">
+                <span>PERSONAL PORTFOLIO</span>
+                <span>VER. 02</span>
             </div>
-            <div class="page" id="projectpage">
-                <div class="room" id="project_image">
-                    <div class="room_image">
-                        <a id="project_link_url" href="#">
-                            <img id="project_icon" src="">
-                        </a>
-                    </div>
-                </div>
-                <div class="room" id="project_description">
-                    <div class="project_room_text" id="project_description_text">
-                        Click a project for details.
-                    </div>
-                </div>
-                <div class="room" id="project_list">
-                    <div class="project_list_text" id="myHealth" onclick="toggleProject('myHealth')">myHealth</div>
-                    <div class="project_list_text" id="hotel" onclick="toggleProject('hotel')">Hotel Reservation</div>
-                    <div class="project_list_text" id="qaAuto" onclick="toggleProject('qaAuto')">Quality Assurance Automation Script</div>
-                    <div class="project_list_text" id="fmAuto" onclick="toggleProject('fmAuto')">Frame Mark Automation Script</div>
-                    <div class="project_list_text" id="fileSort" onclick="toggleProject('fileSort')">Automatic File Sorter</div>
-                    <div class="project_list_text" id="tennis" onclick="toggleProject('tennis')">Tennis Match Predictions</div>
-                    <div class="project_list_text" id="filght" onclick="toggleProject('flight')">Flight Predictions</div>
-                    <div class="project_list_text" id="trafficLight" onclick="toggleProject('trafficLight')">Traffic Light Simulation</div>
-                    <div class="project_list_text" id="potentiometer" onclick="toggleProject('potentiometer')">Potentiometer Reading</div>
-                </div>
-                <!-- <div class="room" id="project_link">
-                    <div class="room_text">link</div>
-                </div> -->
-            </div>
-            <div class="page" id="resumepage">
-                <div class="room" id="resume_text">
-                    <p class="resume_room_text" id="resumename">Rahi Misra</p>
-                    <p class="resume_room_text">rahi.misra@gmail.com</p>
-                    <p class="resume_room_text">Bachelor’s Degree of Science in Computer Science - California State University Northridge - 2024</p>
-                    <div class="resume_room_text" id="skillspace"></div>
-                    <p class="resume_room_text">Visual Basic, C, C++, Java, HTML, CSS, Javascript, Racket, Prolog, SQL</p>
-                    <p class="resume_room_text">Jira, Trello, Github, Figma, Gimp</p>
-                    <p class="resume_room_text">Agile Methodologies, Project Planning, Full Stack Development</p>
-                </div>
-                <a href="files/Rahi_Misra_Resume_SE.pdf" target="_blank" class="room" id="resume_link">
-                    <div class="room_text">full resume</div>
+
+            <h1>Rahi Misra</h1>
+
+            <p class="professional-title">
+                Software Developer
+            </p>
+
+            <p class="introduction">
+                Pursuiting knowledge in science and technology. 
+            </p>
+
+            <div class="header-links">
+                <a href="files/Rahi_Misra_Resume_SE.pdf"
+                   target="_blank">
+                    View Resume
                 </a>
-                <div class="room" id="resume_about" onclick="showPage('aboutpage')">
-                    <div class="room_text">about</div>
-                </div>
-                <div class="room" id="resume_contact" onclick="showPage('contactpage')">
-                    <div class="room_text">contact</div>
-                </div>
+
+                <a href="https://github.com/RahiMisra">
+                    GitHub
+                </a>
+
+                <a href="https://www.linkedin.com/in/rahi-misra/">
+                    LinkedIn
+                </a>
             </div>
-            <div class="page" id="aboutpage">
-                <div class="room" id="about_image">
-                    <img id="user_icon" src="icons/user.svg" alt="pfp">
+
+        </header>
+
+        <!-- In-page navigation -->
+        <nav class="sheet-nav" aria-label="Page sections">
+            <a href="#projects">01 / Projects</a>
+            <a href="#about">02 / About</a>
+            <a href="#contact">03 / Contact</a>
+
+            <div class="scroll-indicator-meta">
+                <span id="scroll-section-label">00 / OVERVIEW</span>
+                <span id="scroll-progress-value">0%</span>
+            </div>
+        </nav>
+
+        <!-- Selected projects -->
+        <section id="projects" class="sheet-section" data-progress-label="01 / PROJECTS">
+            <h2>01 / Selected Projects</h2>
+
+            <p class="section-intro">
+                A selection of software projects and technical work.
+            </p>
+
+            <div class="project-list">
+
+                <article class="project" id="chess-notes">
+                    <span class="project-number">SYS. 001</span>
+                    <h3>Chess Notes</h3>
+                    <p>
+                        A full-stack CRUD application for managing chess notes,
+                        combining a React frontend and Spring Boot backend with
+                        PostgreSQL persistence and Prolog-based logic. The application
+                        is containerized with Docker and deployed on Render.
+                    </p>
+
+                    <ul class="project-technologies">
+                        <li>React</li>
+                        <li>Java</li>
+                        <li>Spring Boot</li>
+                        <li>PostgreSQL</li>
+                        <li>Prolog</li>
+                        <li>Docker</li>
+                        <li>Render</li>
+                    </ul>
+
+                    <div class="project-links">
+                        <a href="https://github.com/RahiMisra/full-stack-chess">
+                            Source Code
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project" id="my-health">
+                    <span class="project-number">SYS. 002</span>
+                    <h3>myHealth</h3>
+                    <p>
+                        An Android application developed as a group school project
+                        to help dialysis patients schedule appointments at dialysis
+                        centers. Built with Java and Kotlin using Android Studio.
+                    </p>
+
+                    <ul class="project-technologies">
+                        <li>Java</li>
+                        <li>Kotlin</li>
+                        <li>Android Studio</li>
+                    </ul>
+
+                    <div class="project-links">
+                        <a href="https://github.com/bryan-avila/myHealth">
+                            Source Code
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project" id="wildfire-geovisualization">
+                    <span class="project-number">SYS. 003</span>
+                    <h3>Wildfire Geovisualization</h3>
+                    <p>
+                        An interactive geospatial visualization for exploring
+                        wildfire-related data and machine learning predictions.
+                        Built with React and Deck.gl to present complex spatial
+                        information in an interactive visual format.
+                    </p>
+
+                    <ul class="project-technologies">
+                        <li>React</li>
+                        <li>Deck.gl</li>
+                        <li>JavaScript</li>
+                    </ul>
+
+                    <div class="project-links">
+                        <a href="https://github.com/CSUN-ARCS-GeoInfoVisualization/wildfire-visualization">
+                            Source Code
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project" id="ai-filesort">
+                    <span class="project-number">SYS. 004</span>
+                    <h3>AI FileSort</h3>
+                    <p>
+                        A Python application that uses the OpenAI API to analyze
+                        files and automatically organize them into folders and
+                        subfolders, making file organization less manual.
+                    </p>
+
+                    <ul class="project-technologies">
+                        <li>Python</li>
+                        <li>OpenAI API</li>
+                        <li>File Organization</li>
+                    </ul>
+
+                    <div class="project-links">
+                        <a href="https://github.com/RahiMisra/FileSorting">
+                            Source Code
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Personal information -->
+        <section id="about" class="sheet-section" data-progress-label="02 / ABOUT">
+            <h2>02 / About Me</h2>
+
+            <p class="section-intro">
+                Learn more about me.
+            </p>
+
+            <div class="about-content">
+                <div id="background">
+                    <h3>Background</h3>
+                    <p>
+                        I'm a computer science graduate who enjoys learning how things work.
+                        I'm particularly drawn to projects that involve unfamiliar technologies,
+                        unconventional approaches, and interesting technical challenges.
+                    </p>
+                    <p>
+                        I want to learn as much as I can, and I find that the best way to do
+                        that is by tackling problems that push me outside my comfort zone and
+                        learning whatever is necessary to solve them.
+                    </p>
                 </div>
-                <div class="room" id="about_description">
-                    <div class="room_description_text">
-                        Rahi Misra is a 21 year old software developer from California. He has a bachelor's degree in computer science from California State University Northridge. He's interested in music and games, and is looking to combine those passions with his computer science skills.
+
+                <div id="skills">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-category">
+                        <h4>Languages</h4>
+                        <p>Java, Python, C, C++, JavaScript, SQL, Racket, Prolog, C#, Visual Basic</p>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Frontend</h4>
+                        <p>React, Vite, HTML, CSS</p>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Backend</h4>
+                        <p>Spring Boot, REST APIs, Node.js</p>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Databases</h4>
+                        <p>PostgreSQL, MySQL</p>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Tools & Deployment</h4>
+                        <p>Git, GitHub, Docker, Firebase, Render</p>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Other Skills</h4>
+                        <p>Agile Development, Machine Learning, Distributed Systems,
+                        Parallel Computing, Mobile Development, Game Development</p>
                     </div>
                 </div>
-                <div class="room" id="about_resume" onclick="showPage('resumepage')">
-                    <div class="room_text">resume</div>
+
+                <div id="education">
+                    <h3>Education</h3>
+                    <article class="education-entry">
+                        <h4>Master of Science in Computer Science</h4>
+                        <div class="entry-meta">
+                            <span class="entry-location">California State University, Northridge</span>
+                            <span class="entry-date">2025</span>
+                        </div>
+                    </article>
+                    <article class="education-entry">
+                        <h4>Bachelor of Science in Computer Science</h4>
+                        <div class="entry-meta">
+                            <span class="entry-location">California State University, Northridge</span>
+                            <span class="entry-date">2024</span>
+                        </div>
+                    </article>
                 </div>
-                <div class="room" id="about_contact" onclick="showPage('contactpage')">
-                    <div class="room_text">contact</div>
+
+                <div id="experience">
+                    <h3>Experience</h3>
+                    <article class="experience-entry">
+                        <h4>REU Student Mentor</h4>
+                        <div class="entry-meta">
+                            <span class="entry-location">California State University · Los Angeles, CA</span>
+                            <span class="entry-date">Jun 2025 – Jul 2025</span>
+                        </div>
+                        <ul>
+                            <li>Mentored an undergraduate research team investigating image-recognition techniques for plant 
+                                biomass estimation, contributing to a research paper published in the 2025 IEEE International 
+                                Conference on Data Mining Workshops (ICDMW).</li>
+                            <li>Delivered technical lectures on computer science tools, technologies, and research methodologies 
+                                to support undergraduate researchers.</li>
+                        </ul>
+                    </article>
+
+                    <article class="experience-entry">
+                        <h4>QA Intern — Enders Gate</h4>
+                        <div class="entry-meta">
+                            <span class="entry-location">5Head Games · Los Angeles, CA</span>
+                            <span class="entry-date">Jan 2024 – May 2024</span>
+                        </div>
+                        <ul>
+                            <li>Conducted black-box stress testing on the Beta version of Enders Gate, identifying defects and
+                                evaluating game stability under varied gameplay conditions.</li>
+                            <li>Performed regression testing and documented reproducible bug cases for the development team to 
+                                investigate and resolve.</li>
+                        </ul>
+                    </article>
                 </div>
+
             </div>
-            <div class="page" id="contactpage">
-                <div class="room" id="contact_text">
-                    <a href="mailto:rahi.misra112@my.csun.edu" class="contact_room_text">rahi.misra@gmail.com</a>
-                </div>
+        </section>
+
+        <!-- Contact and document footer -->
+        <footer id="contact" class="sheet-footer" data-progress-label="05 / CONTACT">
+            <h2>03 / Contact</h2>
+
+            <p class="section-intro">
+                Please reach out to connect.
+            </p>
+
+            <a href="mailto:rahi.misra.pro@gmail.com">
+                rahi.misra.pro@gmail.com
+            </a>
+
+            <div class="document-footer">
+                <span>PORTFOLIO / RAHI MISRA</span>
+                <a href="#top">RETURN TO TOP ↑</a>
+                <span>END OF DOCUMENT</span>
             </div>
-            <div class="page" id="themepage">
-                <div class="room" id="theme_white_room">
-                    <div class="theme_text">white</div>
-                </div>
-                <div class="room" id="theme_blue_room">
-                    <div class="theme_text">blue</div>
-                </div>
-                <div class="room" id="theme_black_room">
-                    <div class="theme_text">black</div>
-                </div>
-            </div>
-        </div>
-        <!--this div is a set of info boxes that make the website look like a technical document-->
-        <div id="info_bar">
-            <!--this box will display my skills in the form of little icons-->
-            <div id="skills_box" class="box">
-                <div id="skills_text">Skills:</div>
-                <div id="skill_icons">
-                        <a class="room_image" href="https://www.java.com">
-                            <img class="icon" id="java_icon" src="icons/java.svg" alt="java">
-                        </a>
-                        <a class="room_image" href="https://en.wikipedia.org/wiki/C%2B%2B">
-                            <img class="icon" id="cpp_icon" src="icons/cpp.svg" alt="cpp">
-                        </a>
-                        <a class="room_image" href="https://en.wikipedia.org/wiki/C_(programming_language)">
-                            <img class="icon" id="c_icon" src="icons/c.svg" alt="c">
-                        </a>
-                        <a class="room_image" href="https://www.python.org">
-                            <img class="icon" id="python_icon" src="icons/python.svg" alt="vb">
-                        </a>
-                        <a class="room_image" href="https://en.wikipedia.org/wiki/SQL">
-                            <img class="icon" id="sql_icon"src="icons/mysql.svg" alt="mysql">
-                        </a>
-                        <a class="room_image" href="https://en.wikipedia.org/wiki/HTML">
-                            <img class="icon" id="html_icon" src="icons/html.svg" alt="html">
-                        </a>
-                        <a class="room_image" href="https://en.wikipedia.org/wiki/CSS">
-                            <img class="icon" id="css_icon" src="icons/css.svg" alt="css">
-                        </a>
-                        <a class="room_image" href="https://en.wikipedia.org/wiki/JavaScript">
-                            <img class="icon" id="javascript_icon" src="icons/js.svg" alt="javascript">
-                        </a>
-                        <a class="room_image" href="https://racket-lang.org">
-                            <img class="icon" id="racket_icon" src="icons/racket.svg" alt="racket">
-                        </a>
-                        <a class="room_image" href="https://www.swi-prolog.org">
-                            <img class="icon" id="prolog_icon" src="icons/prolog.svg" alt="prolog">
-                        </a>
-                </div>
-            </div>
-            <div id="nav_box" class="box">
-                <!--this is the navigation box at the bottom of the website-->
-                <div id="navlinks">
-                    <!--change the #s with the file name the page is in-->
-                    <div class="navlink" onclick="showPage('homepage')">Home</div>
-                    <div class="navlink" onclick="showPage('projectpage')">Projects</div>
-                    <div class="navlink" onclick="showPage('resumepage')">Resume</div>
-                    <div class="navlink" onclick="showPage('aboutpage')">About Me</div>
-                    <div class="navlink" onclick="showPage('contactpage')">Contact</div>
-                </div>
-                <!--these are the room numbers that are listed in parallel with the nav links-->
-                <div id="room_num">
-                    <div class="roomlabel" onclick="showPage('homepage')">Room 0</div>
-                    <div class="roomlabel" onclick="showPage('projectpage')">Room 1</div>
-                    <div class="roomlabel" onclick="showPage('resumepage')">Room 2</div>
-                    <div class="roomlabel" onclick="showPage('aboutpage')">Room 3</div>
-                    <div class="roomlabel" onclick="showPage('contactpage')">Room 4</div>
-                </div>
-            </div>
-            <div id="theme_box" class="box">
-                <!--this is the quick theme selection box-->
-                <div id="theme_selector">
-                    <div class="theme_option" id="theme_white" onclick="toggleTheme('white')">Theme: White</div>
-                    <div class="theme_option" id="theme_blue" onclick="toggleTheme('blue')">Theme: Blue</div>
-                    <div class="theme_option" id="theme_black" onclick="toggleTheme('black')">Theme: Black</div>
-                </div>
-            </div>
-            <!--this box displays a small discription of the site-->
-            <!--might change this to have icons for all my skills-->
-            <!--might also want a resume button-->
-            <div id="description_box" class="box">
-                <div id="description">A portfolio created to layout their skills and experiences as a Software Engineer. The design of this portfolio is inspired by technical documents such as blueprints.</div>
-            </div>
-            <div id="cool_box" class="box">
-                <!--this box is text that makes this look more technical-->
-                <div id="codename_box" class="minibox">Portfolio 1 Ver. A Codename: BLUEPRINT</div>
-                <!--this box says i made it-->
-                <div id="name_box" class="minibox">Website by</div>
-            </div>
-        </div>
+        </footer>
+
     </main>
 </body>
 </html>
